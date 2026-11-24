@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmar Keys — an open-world crime game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="hud">
+    <div id="hud-left">
+      <div id="hud-cash">$0</div>
+      <div id="hud-stars">☆☆☆☆☆</div>
+      <div id="hud-speed">0 mph</div>
+    </div>
+    <div id="hud-right">
+      <canvas id="minimap" width="200" height="150"></canvas>
+      <div id="hud-mission">The Pickup — $300</div>
+      <div id="hud-objective"></div>
+    </div>
+    <div id="toast" class="hidden"></div>
+  </div>
+
+  <div id="menu" class="overlay">
+    <h1>SOLMAR KEYS</h1>
+    <p class="tagline">An open-world crime game on the island of Solmar</p>
+    <p class="story">You are a driver for hire with nothing but a borrowed car and a phone
+    full of Rico Vega's jobs. Steal cars, outrun the Solmar PD, and run three
+    jobs — a pickup, a getaway, and the big score — to own the island.</p>
+    <div class="controls">
+      <div><b>WASD / Arrows</b> — walk or drive</div>
+      <div><b>E</b> — get in / out of a car (stealing one brings the police)</div>
+      <div><b>F / Click</b> — punch</div>
+      <div><b>Shift</b> — run &nbsp;·&nbsp; <b>P</b> — pause &nbsp;·&nbsp; <b>M</b> — mute</div>
+    </div>
+    <button id="btn-start">▶ Start a new game</button>
+    <button id="btn-continue" style="display:none">Continue</button>
+    <button id="btn-mute">🔊 Sound</button>
+    <p class="fine">Solmar Keys is an original game. Its city, characters, vehicles, names and
+    story are its own — nothing from any commercial game. Built for make.fun.</p>
+  </div>
+
+  <div id="pause" class="overlay hidden">
+    <h2>Paused</h2>
+    <p>Solmar waits for no one — except right now.</p>
+    <button id="btn-resume">▶ Resume</button>
+  </div>
+
+  <div id="busted" class="overlay hidden">
+    <h2>BUSTED</h2>
+    <p>The Solmar PD caught you. They took a cut and dropped you at the hospital.</p>
+  </div>
+
+  <div id="complete" class="overlay hidden">
+    <h2>STORY COMPLETE</h2>
+    <p>All three of Rico's jobs are done. The island is yours — free roam, no curfew.</p>
+    <button id="btn-keep-playing">▶ Keep playing</button>
+  </div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
